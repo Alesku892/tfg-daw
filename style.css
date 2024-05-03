@@ -1,0 +1,350 @@
+body {
+    margin: 0;
+}
+
+body header {
+    background-color: azure;
+}
+
+header img {
+    padding: 5px;
+}
+
+nav {
+    background-color: cadetblue;
+    font-size: 2em;
+}
+
+nav li a {
+    text-align: center;
+}
+
+.dropdown-menu {
+    background-color: cadetblue !important;
+}
+
+.doc a {
+    color: black;
+    text-decoration: none;
+}
+
+/* DIRECTORIO https://cssgrid-generator.netlify.app/ */
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    grid-template-rows: repeat(21, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    height: 500px;
+    width: 750px;
+    border: 2px solid black;
+}
+
+.parent div {
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 4 / 4;
+}
+
+.div2 {
+    grid-area: 6 / 1 / 9 / 4;
+}
+
+.div3 {
+    grid-area: 6 / 4 / 9 / 7;
+}
+
+.div4 {
+    grid-area: 6 / 7 / 9 / 10;
+}
+
+.div5 {
+    grid-area: 6 / 10 / 9 / 13;
+}
+
+.div6 {
+    grid-area: 9 / 1 / 12 / 4;
+}
+
+.div7 {
+    grid-area: 9 / 4 / 12 / 7;
+}
+
+.div8 {
+    grid-area: 9 / 7 / 12 / 10;
+}
+
+.div9 {
+    grid-area: 9 / 10 / 12 / 13;
+}
+
+.div10 {
+    grid-area: 14 / 1 / 17 / 4;
+}
+
+.div11 {
+    grid-area: 14 / 4 / 17 / 7;
+}
+
+.div12 {
+    grid-area: 14 / 7 / 17 / 10;
+}
+
+.div13 {
+    grid-area: 14 / 10 / 17 / 13;
+}
+
+.div14 {
+    grid-area: 17 / 1 / 20 / 4;
+}
+
+.div15 {
+    grid-area: 17 / 4 / 20 / 7;
+}
+
+.div16 {
+    grid-area: 17 / 7 / 20 / 10;
+}
+
+.div17 {
+    grid-area: 17 / 10 / 20 / 13;
+}
+
+.div18 {
+    grid-area: 1 / 12 / 4 / 15;
+}
+
+.div19 {
+    grid-area: 21 / 1 / 22 / 13;
+    letter-spacing: 10px;
+}
+
+.div20 {
+    grid-area: 7 / 14 / 19 / 15;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-align: center;
+    letter-spacing: 10px;
+}
+
+/* FIN DIRECTORIO */
+
+/* ORGANIGRAMA https://gist.github.com/rctorr/0315c592fd5ea5cd7de371d913975995 */
+
+.organigrama * {
+    margin: 0px;
+    padding: 0px;
+}
+
+.organigrama ul {
+    padding-top: 20px;
+    position: relative;
+}
+
+.organigrama li {
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    padding: 20px 5px 0px 5px;
+    position: relative;
+}
+
+.organigrama li::before,
+.organigrama li::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: 50%;
+    border-top: 1px solid black;
+    width: 50%;
+    height: 20px;
+}
+
+.organigrama li::after {
+    right: auto;
+    left: 50%;
+    border-left: 1px solid black;
+}
+
+.organigrama li:only-child::before,
+.organigrama li:only-child::after {
+    display: none;
+}
+
+.organigrama li:only-child {
+    padding-top: 0;
+}
+
+.organigrama li:first-child::before,
+.organigrama li:last-child::after {
+    border: none;
+}
+
+.organigrama li:last-child::before {
+    border-right: 1px solid black;
+    border-radius: 0 10px 0 0;
+}
+
+.organigrama li:first-child::after {
+    border-radius: 10px 0 0 0;
+}
+
+.organigrama ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid black;
+    width: 0;
+    height: 20px;
+}
+
+.organigrama ul>li>ul>li>ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid black;
+    width: 0;
+    height: 20px;
+}
+
+.org:not(:nth-child(2)) {
+    margin-top: 49px;
+}
+
+.organigrama li a {
+    border: 1px solid black;
+    padding: 1em 0.75em;
+    text-decoration: none;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: arial, verdana, tahoma;
+    font-size: 0.85em;
+    display: inline-block;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    transition: all 500ms;
+}
+
+.organigrama li a:hover {
+    border: 1px solid black;
+    color: #ddd;
+    background-color: azure;
+    display: inline-block;
+}
+
+.organigrama>ul>li>a {
+    font-size: 1em;
+}
+
+.organigrama>ul>li>ul>li>a {
+    width: 16em;
+}
+
+.organigrama>ul>li>ul>li>ul>li>a {
+    width: 15em;
+}
+
+/* FIN ORGANIGRAMA */
+
+.directorio {
+    display: flex;
+}
+
+.dir {
+    margin-top: 5vh;
+}
+
+.dir1 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dir2 {
+    margin-left: 5vw;
+}
+
+.dirpp a {
+    color: black;
+    text-decoration: none;
+}
+
+.dirpd {
+    visibility: hidden;
+}
+
+.dirpt {
+    visibility: hidden;
+}
+
+.dirpd a {
+    color: black;
+    text-decoration: none;
+}
+
+.dirinfo {
+    visibility: hidden;
+}
+
+.denuncias form {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.denuncias form textarea {
+    resize: none;
+    width: 100%;
+    height: 20vh;
+}
+
+.denuncias form input {
+    margin-top: 3vh;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.hiddenresp {
+    visibility: hidden;
+}
+
+table td, table th {
+    border: 1px solid black;
+    padding-right: 2vw;
+}
+
+table {
+    margin-bottom: 5vh;
+}
+
+.alta {
+    display: flex; 
+}
+
+.alta1, .alta2 {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between; 
+}
+
+.ptlibres {
+    visibility: hidden;
+}
+
+.button {
+    margin-bottom: 5vh;
+}
